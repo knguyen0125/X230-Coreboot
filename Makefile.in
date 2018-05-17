@@ -1,3 +1,12 @@
+CURR_DIR=$(shell pwd)
+PROGRAMMER=$(CURR_DIR)/flashrom/flashrom -p linux_spi:dev=/dev/spidev0.0,spispeed=512
+
+install-flashrom:
+	./PrepareFlashrom.sh
+
+install-env:
+	@$(PROGRAMMER)
+
 help: # Show a help message
 	@echo 'Usage:'
 	@echo '  make <target>'

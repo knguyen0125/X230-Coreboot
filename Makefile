@@ -2,11 +2,17 @@ include Makefile.in
 
 all:
 
+# ============== Rom Dump
 romdump: ## Dump X230's BIOS into respective folder
 	@echo "abc"
 
+# ============== Install
+
 install-flashrom: ## Install Flashrom
-	@echo "Install flashrom"
+
+install-coreboot: ## Install Coreboot
+
+install-env: ## Prepare Environment
 
 clean: ## Clean the repository
 	@echo "Clean"
