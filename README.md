@@ -14,7 +14,7 @@
 	* _Note_: Any recent Ubuntu version is fine - I only tested this with 18.04 LTS.
 	* _Note_: Live CD is also acceptable - IF you don't need to modify Coreboot.
 	* _Note_: It is possible to compile Coreboot from RPi, but it's hugely time-consuming and not recommended.
-	* __NOTE__: UEFI is not supported (?) by SeaBIOS. If you have OS with UEFI, you might not be able to boot after install Coreboot and may need to reinstall OS. It is possible to fix it without changing everything, but it's outside the scope of this project
+	* __NOTE__: UEFI boot is not supported (?) under SeaBIOS. If you have OS with UEFI, you might not be able to boot after install Coreboot and may need to reinstall OS. It is possible to fix it without changing everything, but it's outside the scope of this project
 * For Raspberry Pi 3: Raspbian (any version)
 
 # Preparation
