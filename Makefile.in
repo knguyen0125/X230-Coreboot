@@ -1,11 +1,17 @@
 CURR_DIR=$(shell pwd)
 PROGRAMMER=$(CURR_DIR)/flashrom/flashrom -p linux_spi:dev=/dev/spidev0.0,spispeed=512
 
-install-flashrom:
-	./PrepareFlashrom.sh
+install-coreboot: install-env
+	@echo "Installing Coreboot"
+	@./scripts/Coreboot.sh
+
+install-flashrom: install-env
+	@echo "Installing Flashrom"
+	@./scripts/Flashrom.sh
 
 install-env:
-	@$(PROGRAMMER)
+	@echo "Preparing Ubuntu/Debian environment for Coreboot"
+	@./scripts/Environment.sh
 
 help: # Show a help message
 	@echo 'Usage:'
